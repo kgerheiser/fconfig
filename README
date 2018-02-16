@@ -1,0 +1,32 @@
+fconfig is a simple Fortran module to easily read key-value pairs from files.
+
+There are two steps required to read values:
+
+      For the configuration file with the following data:
+      	          #comment - this is pi
+      	          pi: 3.14159
+    		  n: 3
+		  message: hello, world!
+		  
+		  !comment, "true", "false", "F", and "t" (case doesn't matter) are all valid
+		  flag: true
+
+      1. Create a config object and read a file
+      	 	type(config) :: conf
+	 	conf%read_file("config_file.txt")
+      2. Get the value
+      	     	 call conf%value_from_key("pi", r4)
+		 print *, r4 !prints 3.14159
+
+See Example.f90 for complete examples
+
+Default values are supported for keys that are not found in the file by specificing the optional argument "default_value".
+
+Configuration files are specified with key-value pairs separated by colons.
+White-space and empty lines are ignored.
+
+The supported types are real32, real64, int32, int64, character arrays (strings), and logicals
+
+Lines that begin with "#" or "!" count as comments and are otherwise ignored
+
+
