@@ -37,13 +37,11 @@ contains
     character(*), optional, intent(in) :: default_value
     character(:), allocatable, intent(out) :: val
     character(:), allocatable :: str_val
-    integer :: iostat
 
     str_val = conf%find_str_value_with_key(key)
 
-    if (str_val == "") then
-       read(str_val, *, iostat=iostat) val
-       if (iostat /= 0) call string_conversion_error(str_val, "str", key)      
+    if (.not. str_val == "") then
+       val = str_val    
     else
        if (present(default_value)) then
           val = default_value
