@@ -1,5 +1,9 @@
 fconfig is a simple Fortran module to easily read key-value pairs from files.
 
+Requires a modern Fortran compiler as the code makes as the code makes heavy use of Fortran 2003 features and the "newunit" option found in Fortran 2008.
+
+Has been tested with both gfortran (6.3) and ifort (18).
+
 There are two steps required to read values:
 
       For the configuration file with the following data:
