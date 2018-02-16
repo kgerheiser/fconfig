@@ -12,6 +12,7 @@ There are two steps required to read values:
 		  flag: true
 
       1. Create a config object and read a file
+      	 	use fconfig
       	 	type(config) :: conf
 	 	conf%read_file("config_file.txt")
       2. Get the value
