@@ -1,4 +1,4 @@
-module config_mod
+module fconfig
   use iso_fortran_env, only: real64, real32, int64, int32, iostat_end
   implicit none
 
@@ -287,5 +287,5 @@ contains
 
   end subroutine read_file
 
-end module Config_Mod
+end module fconfig
 
