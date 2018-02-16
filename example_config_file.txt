@@ -1,0 +1,14 @@
+
+!this is the number 12
+integer: 12
+
+#this is pi
+real: 3.1415926
+
+# t or f, true or false (case doesn't matter)
+logical1: true
+logical2: f
+logical3: T
+logical4: FALSe
+
+string: the quick brown fox jumps over the lazy dog
