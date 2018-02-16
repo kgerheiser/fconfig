@@ -26,7 +26,6 @@ module fconfig
      procedure, private :: value_from_key_logical
      generic :: value_from_key => value_from_key_str, value_from_key_r4, &
           value_from_key_r8, value_from_key_i4, value_from_key_i8, value_from_key_logical
-
   end type config
 
 contains
