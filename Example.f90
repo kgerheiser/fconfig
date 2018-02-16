@@ -1,5 +1,5 @@
 program example
-  use Config_Mod
+  use fconfig
   implicit none
 
   character(len=30), parameter :: file = "example_config_file.txt"
