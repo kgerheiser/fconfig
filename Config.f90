@@ -17,7 +17,7 @@ module config_mod
    contains
      procedure :: find_str_value_with_key
      procedure, private :: find_key_index
-     procedure :: read_config_file
+     procedure :: read_file
      procedure, private :: value_from_key_str
      procedure, private :: value_from_key_r4
      procedure, private :: value_from_key_r8
@@ -214,7 +214,7 @@ contains
   end function find_str_value_with_key
 
 
-  subroutine read_config_file(conf, file) 
+  subroutine read_file(conf, file) 
     class(config), intent(inout) :: conf
     character(*), intent(in) :: file
 
@@ -287,7 +287,7 @@ contains
 
     end function accept_line
 
-  end subroutine read_config_file
+  end subroutine read_file
 
 end module Config_Mod
 
